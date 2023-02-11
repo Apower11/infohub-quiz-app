@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, JSXElementConstructor, ReactElement, ReactFragment, ReactPortal } from 'react'
 import reactLogo from './assets/react.svg'
 import { Link } from 'react-router-dom';
 import '../css/Navbar.css';
@@ -48,31 +48,39 @@ for(let i = 0; i < 4; i++){
     answers[i] = countryList[randomIntFromInterval(0,countryList.length - 1)]
 }
 
-function alertSensor() {
-    alert(123);
+function wrongAnswer() {
+    alert("Wrong Answer");
 }
 
-function QuizQuestion() {
-    const [counter, setCounter] = useState(10);
+function QuizQuestion(props: { score: number; }) {
+    const [counter, setCounter] = useState(60);
+    const [score, setScore] = useState(props.score);
+    function correctAnswer() {
+        alert("Correct Answer");
+        // setScore(score + 1);
+        // props.score = props.score + 1;
+        window.location.reload();
+    }
     useEffect(() => {
         counter > 0 && setTimeout(() => (setCounter(counter - 1)), 1000);
         if(counter <= 0){
-            alert("Time's up");
+            window.location.reload();
         }
     }, [counter]);
     return (
       <div className="question">
         <h3>{question1.question}</h3>
         <h5>{counter}</h5>
+        <h6>{props.score}</h6>
         <div className="question-image">
             <img src={chosenQuestion.imageLink} />
         </div>
         <div className="answer-options">
         {answers.map((item,index) => {
             if(index == answerPosition){
-                return <button onClick={alertSensor} key={index}>{item}</button>
+                return <button onClick={correctAnswer} key={index}>{item}</button>
             } else {
-                return <button key={index}>{item}</button>
+                return <button onClick={wrongAnswer} key={index}>{item}</button>
             }
         })}
         </div>

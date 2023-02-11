@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 import Navbar from './layout/Navbar';
-import QuizQuestion from './pages/QuizQuestion';
+import Quiz from './pages/Quiz';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,7 +32,7 @@ function App() {
       </p> */}
       <Navbar />
       <Routes>
-        <Route path="/" element={<QuizQuestion />} />
+        <Route path="/" element={<Quiz />} />
         <Route path="/about" element={<About />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>

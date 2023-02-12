@@ -19,12 +19,12 @@ let questions: any[] = [];
 
 let questionsFinished = false;
 
-let question1: Question = new Question("What country is represented by this flag?", "Spain", "./src/assets/images/spain.svg");
-let question2: Question = new Question("What country is represented by this flag?", "Romania", "./src/assets/images/romania.png");
-let question3: Question = new Question("What country is represented by this flag?", "Niger", "./src/assets/images/niger.png");
-let question4: Question = new Question("What country is represented by this flag?", "Mexico", "./src/assets/images/mexico.png");
-let question5: Question = new Question("What country is represented by this flag?", "Barbados", "./src/assets/images/barbados.svg");
-let question6: Question = new Question("What country is represented by this flag?", "Saint Lucia", "./src/assets/images/saint-lucia.png");
+let question1: Question = new Question("What country is represented by this flag?", "Spain", "infohubquiz.netlify.app/src/assets/images/spain.svg");
+let question2: Question = new Question("What country is represented by this flag?", "Romania", "infohubquiz.netlify.app/src/assets/images/romania.png");
+let question3: Question = new Question("What country is represented by this flag?", "Niger", "infohubquiz.netlify.app/src/assets/images/niger.png");
+let question4: Question = new Question("What country is represented by this flag?", "Mexico", "infohubquiz.netlify.app/src/assets/images/mexico.png");
+let question5: Question = new Question("What country is represented by this flag?", "Barbados", "infohubquiz.netlify.app/src/assets/images/barbados.svg");
+let question6: Question = new Question("What country is represented by this flag?", "Saint Lucia", "infohubquiz.netlify.app/src/assets/images/saint-lucia.png");
 
 questions.push(question1);
 questions.push(question2);

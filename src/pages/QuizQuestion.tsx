@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef, JSXElementConstructor, ReactElement, ReactFragment, ReactPortal } from 'react'
 import reactLogo from './assets/react.svg'
 import { Link } from 'react-router-dom';
+import Img1 from '../assets/images/spain.svg';
+import Img2 from '../assets/images/romania.png';
+import Img3 from '../assets/images/niger.png';
+import Img4 from '../assets/images/mexico.png';
+import Img5 from '../assets/images/barbados.svg';
+import Img6 from '../assets/images/saint-lucia.png';
 import '../css/Navbar.css';
 import '../css/QuizQuestion.css';
 
@@ -19,12 +25,12 @@ let questions: any[] = [];
 
 let questionsFinished = false;
 
-let question1: Question = new Question("What country is represented by this flag?", "Spain", "infohubquiz.netlify.app/src/assets/images/spain.svg");
-let question2: Question = new Question("What country is represented by this flag?", "Romania", "infohubquiz.netlify.app/src/assets/images/romania.png");
-let question3: Question = new Question("What country is represented by this flag?", "Niger", "infohubquiz.netlify.app/src/assets/images/niger.png");
-let question4: Question = new Question("What country is represented by this flag?", "Mexico", "infohubquiz.netlify.app/src/assets/images/mexico.png");
-let question5: Question = new Question("What country is represented by this flag?", "Barbados", "infohubquiz.netlify.app/src/assets/images/barbados.svg");
-let question6: Question = new Question("What country is represented by this flag?", "Saint Lucia", "infohubquiz.netlify.app/src/assets/images/saint-lucia.png");
+let question1: Question = new Question("What country is represented by this flag?", "Spain", Img1);
+let question2: Question = new Question("What country is represented by this flag?", "Romania", Img2);
+let question3: Question = new Question("What country is represented by this flag?", "Niger", Img3);
+let question4: Question = new Question("What country is represented by this flag?", "Mexico", Img4);
+let question5: Question = new Question("What country is represented by this flag?", "Barbados", Img5);
+let question6: Question = new Question("What country is represented by this flag?", "Saint Lucia", Img6);
 
 questions.push(question1);
 questions.push(question2);

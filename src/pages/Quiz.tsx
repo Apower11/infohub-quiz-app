@@ -8,15 +8,14 @@ import '../css/QuizQuestion.css';
 
 function Quiz() {
     const [score, setScore] = useState(0);
-    function correctAnswer(totalScore: number) {
+    function updateScore() {
         alert("Correct Answer");
         setScore(score + 1);
         console.log(score);
-        window.location.reload();
     }
     return (
       <div className="quiz">
-        <QuizQuestion score={score} />
+        <QuizQuestion score={score} updateScore={updateScore} />
       </div>
     );
   }

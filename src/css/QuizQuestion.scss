@@ -1,8 +1,9 @@
-.question {
+.question-container {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    margin-left: auto;
 }
 
 .question-image {
@@ -29,12 +30,101 @@
     height: 80px;
 }
 
+.question-and-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100vw;
+    text-align: center;
+}
+
+.question {
+    text-align: center;
+}
+
+.counter {
+    height: 85px;
+    width: 85px;
+    border-radius: 50px;
+    background-color: #48C1F4;
+    color: white;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    margin: 0;
+    justify-self: flex-end;
+    margin-left: auto;
+    margin-left: 700px;
+}
+
+@media(max-width: 850px){
+    .counter {
+        position: relative;
+    }
+    .question-and-counter {
+        flex-flow: column-reverse;
+        margin-left: 0;
+        .counter {
+            margin-left: 0;
+        }
+    }
+}
+
 @media(max-width: 650px){
+    body {
+        overflow-x: hidden;
+    }
     .answer-options {
         grid-template-columns: 1fr;
         width: 100%;
     }
     .answer-options > button {
         width: 80%;
+    }
+    .question {
+        width: 80%;
+    }
+    .question-container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 350px){
+    body {
+        overflow-x: hidden;
+    }
+    .question-container {
+        width: 100%;
+    }
+    .question-image {
+        margin: 0;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            margin: 0;
+            max-width: 200px;
+            max-height: 300px;
+        }
+    }
+    .answer-options {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        button {
+            height: 200px;
+            width: 200px;
+        }
     }
 }

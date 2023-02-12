@@ -6,7 +6,6 @@ import Navbar from './layout/Navbar';
 import Quiz from './pages/Quiz';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>

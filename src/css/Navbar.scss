@@ -11,3 +11,9 @@
         font-weight: normal;
     }
 }
+
+@media(max-width: 350px){
+    .navbar {
+        width: 100%;
+    }
+}

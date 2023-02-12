@@ -10,4 +10,10 @@
   margin-left: 40px;
   color: white;
   font-weight: normal;
+}
+
+@media (max-width: 350px) {
+  .navbar {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Navbar.css.map */

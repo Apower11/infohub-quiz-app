@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef, JSXElementConstructor, ReactElement, ReactFragment, ReactPortal } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState, useEffect, useRef, JSXElementConstructor, ReactElement, ReactFragment, ReactPortal } from 'react';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import reactLogo from './assets/react.svg';
 import { Link } from 'react-router-dom';
 import Img1 from '../assets/images/spain.svg';
 import Img2 from '../assets/images/romania.png';
@@ -132,7 +133,7 @@ function QuizQuestion(props: {
                   <span className="counter">{counter}</span>
               </div>
               <div className="question-image">
-                  <img src={chosenQuestion.imageLink} />
+                  <LazyLoadImage src={chosenQuestion.imageLink} />
               </div>
               <div className="answer-options">
               {answers.map((item,index) => {

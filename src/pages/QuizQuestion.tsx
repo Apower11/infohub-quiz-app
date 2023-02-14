@@ -2,12 +2,6 @@ import { useState, useEffect, useRef, JSXElementConstructor, ReactElement, React
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import reactLogo from './assets/react.svg';
 import { Link } from 'react-router-dom';
-import Img1 from '../assets/images/spain.svg';
-import Img2 from '../assets/images/romania.png';
-import Img3 from '../assets/images/niger.png';
-import Img4 from '../assets/images/mexico.png';
-import Img5 from '../assets/images/barbados.svg';
-import Img6 from '../assets/images/saint-lucia.png';
 import '../css/Navbar.css';
 import '../css/QuizQuestion.css';
 
@@ -26,12 +20,12 @@ let questions: any[] = [];
 
 let questionsFinished = false;
 
-let question1: Question = new Question("What country is represented by this flag?", "Spain", Img1);
-let question2: Question = new Question("What country is represented by this flag?", "Romania", Img2);
-let question3: Question = new Question("What country is represented by this flag?", "Niger", Img3);
-let question4: Question = new Question("What country is represented by this flag?", "Mexico", Img4);
-let question5: Question = new Question("What country is represented by this flag?", "Barbados", Img5);
-let question6: Question = new Question("What country is represented by this flag?", "Saint Lucia", Img6);
+let question1: Question = new Question("What country is represented by this flag?", "Spain", 'https://res.cloudinary.com/dfuiyl9sr/image/upload/v1676397145/spain_mf7u7w.svg');
+let question2: Question = new Question("What country is represented by this flag?", "Romania", 'https://res.cloudinary.com/dfuiyl9sr/image/upload/v1676397195/romania_ttuz65.png');
+let question3: Question = new Question("What country is represented by this flag?", "Niger", 'https://res.cloudinary.com/dfuiyl9sr/image/upload/v1676397108/niger_od9bcp.png');
+let question4: Question = new Question("What country is represented by this flag?", "Mexico", 'https://res.cloudinary.com/dfuiyl9sr/image/upload/v1676397221/mexico_f3ocz7.png');
+let question5: Question = new Question("What country is represented by this flag?", "Barbados", 'https://res.cloudinary.com/dfuiyl9sr/image/upload/v1676397096/barbados_eg6bs5.svg');
+let question6: Question = new Question("What country is represented by this flag?", "Saint Lucia", 'https://res.cloudinary.com/dfuiyl9sr/image/upload/v1676397188/saint-lucia_pf36rc.png');
 
 questions.push(question1);
 questions.push(question2);

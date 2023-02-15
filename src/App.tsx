@@ -4,8 +4,16 @@ import { Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 import Navbar from './layout/Navbar';
 import Quiz from './pages/Quiz';
+import QuizQuestion from './pages/QuizQuestion';
 
 function App() {
+  const [questions, setQuestions] = useState([1,2,3,4,5]);
+
+  let setQuizQuestions = (quizQuestions: any) => {
+    console.log(789);
+    console.log(quizQuestions);
+    setQuestions(quizQuestions);
+  }
 
   return (
     <div>
@@ -31,7 +39,8 @@ function App() {
       </p> */}
       <Navbar />
       <Routes>
-        <Route path="/" element={<Quiz />} />
+        <Route path="/" element={<Quiz onGetQuestions={setQuizQuestions} />} />
+        <Route path="/questions" element={<QuizQuestion questions={questions} />} />
         <Route path="/about" element={<About />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
@@ -66,14 +75,6 @@ function Layout() {
       {/* An <Outlet> renders whatever child route is currently active,
           so you can think about this <Outlet> as a placeholder for
           the child routes we defined above. */}
-    </div>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
     </div>
   );
 }

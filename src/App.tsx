@@ -10,8 +10,6 @@ function App() {
   const [questions, setQuestions] = useState([1,2,3,4,5]);
 
   let setQuizQuestions = (quizQuestions: any) => {
-    console.log(789);
-    console.log(quizQuestions);
     setQuestions(quizQuestions);
   }
 

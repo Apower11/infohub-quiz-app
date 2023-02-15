@@ -20,8 +20,6 @@ function QuizQuestion(props: {
     const [score, setScore] = useState(0);
     const navigate = useNavigate();
     let quizScore = JSON.parse(window.localStorage.getItem('score') || "0");
-    console.log(quizQuestions);   
-    console.log("Current Question: " + currentQuestion);
     function correctAnswer() {
         // setQuestionIndex(questionIndex + 1)
         window.localStorage.setItem('score', (parseInt(quizScore) + 1).toString());
@@ -30,7 +28,6 @@ function QuizQuestion(props: {
         setScore(score + 1);
         setCurrentQuestion(quizQuestions[questionIndex + 1]);
         localStorage.setItem("counter","60");
-        console.log("Score: " + score);
     }
     function wrongAnswer() {
         localStorage.setItem("questionIndex", (questionIndex+1).toString())
